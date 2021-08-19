@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheatTable CheatEngineTableVersion="18">
+  <CheatEntries>
+    <CheatEntry>
+      <ID>1</ID>
+      <Description>"造4属性指针"</Description>
+      <Options moHideChildren="1" moAllowManualCollapseAndExpand="1"/>
+      <LastState Activated="0"/>
+      <Color>80000008</Color>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>aobscan(sc,8B 55 DC 8B 45 EC 8B 8A F8 00 00 00)
+[ENABLE]
+alloc(newmem,2048)
+label(returnhere)
+label(originalcode)
+label(exit)
+alloc(pl,8)
+registersymbol(pl)
+newmem:
+push eax
+lea eax,[edx+54]
+mov [pl],eax
+pop eax
+originalcode:
+mov eax,[edx+54]
+mov ebx,[edx+08]
+
+exit:
+jmp returnhere
+
+sc+4d:
+jmp newmem
+nop
+returnhere:
+
+
+ 
+ 
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+dealloc(newmem)
+sc+4d:
+mov eax,[edx+54]
+mov ebx,[edx+08]
+//Alt: db 8B 42 54 8B 5A 08
+</AssemblerScript>
+      <CheatEntries>
+        <CheatEntry>
+          <ID>74</ID>
+          <Description>"生命上限"</Description>
+          <LastState Value="11111" Activated="0" RealAddress="1B680C68"/>
+          <Color>80000008</Color>
+          <VariableType>4 Bytes</VariableType>
+          <Address>pl</Address>
+          <Offsets>
+            <Offset>FFFFFFEC</Offset>
+          </Offsets>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>73</ID>
+          <Description>"生命"</Description>
+          <LastState Value="11111" Activated="0" RealAddress="1B680C6C"/>
+          <Color>80000008</Color>
+          <VariableType>4 Bytes</VariableType>
+          <Address>pl</Address>
+          <Offsets>
+            <Offset>FFFFFFF0</Offset>
+          </Offsets>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>72</ID>
+          <Description>"魔法上限"</Description>
+          <LastState Value="11111" Activated="0" RealAddress="1B680C70"/>
+          <Color>80000008</Color>
+          <VariableType>4 Bytes</VariableType>
+          <Address>pl</Address>
+          <Offsets>
+            <Offset>FFFFFFF4</Offset>
+          </Offsets>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>71</ID>
+          <Description>"魔法"</Description>
+          <LastState Value="11111" Activated="0" RealAddress="1B680C74"/>
+          <Color>80000008</Color>
+          <VariableType>4 Bytes</VariableType>
+          <Address>pl</Address>
+          <Offsets>
+            <Offset>FFFFFFF8</Offset>
+          </Offsets>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>84</ID>
+          <Description>"攻击"</Description>
+          <LastState Value="11111" Activated="0" RealAddress="1B680F38"/>
+          <Color>80000008</Color>
+          <VariableType>Double</VariableType>
+          <Address>pl</Address>
+          <Offsets>
+            <Offset>2BC</Offset>
+          </Offsets>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>83</ID>
+          <Description>"防御"</Description>
+          <LastState Value="11111" Activated="0" RealAddress="1B680F40"/>
+          <Color>80000008</Color>
+          <VariableType>Double</VariableType>
+          <Address>pl</Address>
+          <Offsets>
+            <Offset>2C4</Offset>
+          </Offsets>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>75</ID>
+          <Description>"幸运"</Description>
+          <LastState Value="11111" Activated="0" RealAddress="1B680F78"/>
+          <Color>80000008</Color>
+          <VariableType>Double</VariableType>
+          <Address>pl</Address>
+          <Offsets>
+            <Offset>2FC</Offset>
+          </Offsets>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>82</ID>
+          <Description>"魔抗"</Description>
+          <LastState Value="11111" Activated="0" RealAddress="1B680F48"/>
+          <Color>80000008</Color>
+          <VariableType>Double</VariableType>
+          <Address>pl</Address>
+          <Offsets>
+            <Offset>2CC</Offset>
+          </Offsets>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>79</ID>
+          <Description>"暴击"</Description>
+          <LastState Value="11111" Activated="0" RealAddress="1B680F68"/>
+          <Color>80000008</Color>
+          <VariableType>Double</VariableType>
+          <Address>pl</Address>
+          <Offsets>
+            <Offset>2EC</Offset>
+          </Offsets>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>77</ID>
+          <Description>"闪避"</Description>
+          <LastState Value="11111" Activated="0" RealAddress="1B680F60"/>
+          <Color>80000008</Color>
+          <VariableType>Double</VariableType>
+          <Address>pl</Address>
+          <Offsets>
+            <Offset>2E4</Offset>
+          </Offsets>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>70</ID>
+          <Description>"回血"</Description>
+          <LastState Value="11111" Activated="0" RealAddress="1B680C78"/>
+          <Color>80000008</Color>
+          <VariableType>4 Bytes</VariableType>
+          <Address>pl</Address>
+          <Offsets>
+            <Offset>FFFFFFFC</Offset>
+          </Offsets>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>69</ID>
+          <Description>"回蓝"</Description>
+          <LastState Value="11111" Activated="0" RealAddress="1B680C7C"/>
+          <Color>80000008</Color>
+          <VariableType>4 Bytes</VariableType>
+          <Address>pl</Address>
+          <Offsets>
+            <Offset>0</Offset>
+          </Offsets>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>76</ID>
+          <Description>"守护"</Description>
+          <LastState Value="11111" Activated="0" RealAddress="1B680F80"/>
+          <Color>80000008</Color>
+          <VariableType>Double</VariableType>
+          <Address>pl</Address>
+          <Offsets>
+            <Offset>304</Offset>
+          </Offsets>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>80</ID>
+          <Description>"命中"</Description>
+          <LastState Value="11111" Activated="0" RealAddress="1B680F58"/>
+          <Color>80000008</Color>
+          <VariableType>Double</VariableType>
+          <Address>pl</Address>
+          <Offsets>
+            <Offset>2DC</Offset>
+          </Offsets>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>78</ID>
+          <Description>"韧性"</Description>
+          <LastState Value="11111" Activated="0" RealAddress="1B680F70"/>
+          <Color>80000008</Color>
+          <VariableType>Double</VariableType>
+          <Address>pl</Address>
+          <Offsets>
+            <Offset>2F4</Offset>
+          </Offsets>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>81</ID>
+          <Description>"破魔"</Description>
+          <LastState Value="11111" Activated="0" RealAddress="1B680F50"/>
+          <Color>80000008</Color>
+          <VariableType>Double</VariableType>
+          <Address>pl</Address>
+          <Offsets>
+            <Offset>2D4</Offset>
+          </Offsets>
+        </CheatEntry>
+      </CheatEntries>
+    </CheatEntry>
+  </CheatEntries>
+  <UserdefinedSymbols>
+    <SymbolEntry>
+      <Name>rwzz</Name>
+      <Address>1C5C95D3</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>czdz</Name>
+      <Address>0F198523</Address>
+    </SymbolEntry>
+  </UserdefinedSymbols>
+  <Comments>鍏充簬琛ㄦ牸淇℃伅:
+</Comments>
+</CheatTable>

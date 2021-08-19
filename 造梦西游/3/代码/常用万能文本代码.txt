@@ -1,0 +1,105 @@
+游戏内最大数值：2147483647
+                
+文本篇：
+
+<saveXml type="Object" game4399="true">
+
+
+savedBuffString">1|3|84068,3|300|84068,8|500|84068,4|500000|84068,5|500000|84068,6|500000|84068,7|500000|84508,0|524486057|84508</s>                                        buff修改
+
+curBigStage">数字</s>                  关卡  25全开
+playerNum">数字</s>                    单人变双人可赠送1→2
+luckdata">数字</s>                     幸运
+levelUpLimit">数字</s>                 等级上限1-10代表81-90级
+curLevel">数字</s>                     人物等级
+lhValue">数字</s>                      灵魂
+skillLimit">数字</s>                   可学技能数量
+hasstudybossskill"/>                   boss技能
+skillName">数字</s>                    主动技能等级
+immortalitylist">数字</s>              被动技能丹药23456
+ispassiveskill">                       被动技能等级 
+<s type="Number" name="null">等级</s>  
+<s type="Number" name="null">等级</s>   
+<s type="Number" name="null">等级</s>   
+<s type="Number" name="null">等级</s>   
+<s type="Number" name="null">等级</s>
+
+
+gardenExp">数字</s>                    药园经验
+landgodExp">数字</s>                   土地庙经验
+strenthtimes">数字</s>                 宠物背包强化点
+hasbuypetsecondwarehouse">数字</s>     宠物寄存页数
+
+
+yh_bz_dl">数字_数字_数字</s>          烟花 爆竹 灯笼数量
+whiteQiqiu">数字</s>                   白色气球数量
+worldtransfromTimes">数字</s>          世界传送次数
+zhaoyaojingTimes">数字</s>             照妖镜次数
+fourPhalanx">0-0_0-0_0-0_0-0</s>  星宿阵  朱雀阵阶数  级数  玄武阵阶数 级数（后面四个0没有用）
+constellationsLevel">数字</s>          星宿阵挑战阶数
+cliffordStone">数字</s>                羽毛 精元
+
+
+mysterioustimes">数字</s>              神秘商店购买次数
+constellationTimes">数字</s>           星宿挑战次数
+challengeThreePrinceTimes">数字</s>    挑战三太子次数
+throughPastTimes">数字</s>             回到过去次数 
+bxghTimes">数字</s>                    八仙过海次数
+beidouqixing">数字</s>                 北斗七星次数
+
+
+
+curSaveString">               人物身上装备
+
+bagSaveString">               装备栏
+bagdjSaveString">             道具栏
+bagszSaveString">             时装栏
+bagjnsSaveString">            经书栏
+
+petSave">                     宠物背包
+petEquipSaveString">          宠物装备栏
+petWareHouseSaveString">      宠物寄存栏
+
+
+
+
+
+
+
+
+宠物精灵代码与极限
+名称|生命|魔法|攻击|防御|闪避|暴击|回血|回魔|魔抗|移速|强化|嗜血
+史诗烈火精灵[10]——p_sscylhjl|1500||||||||||360|}
+史诗冰雪精灵[10]——p_sscybxjl|1500||||||||||360|}
+史诗钢石精灵[10]——p_sscygsjl|1500||||||||||360|}
+史诗炎马精灵[10]——p_sscyymjl|3000||||||||||360|}
+史诗年兽精灵[10]——p_sscynsjl|||||||||||360|0.09}
+史诗狂雷精灵[8]没有极限———p_sscykljl|888888|888888|888888|888888|888|888|888888|888888|888|8|360|8}
+史诗子鼠精灵[8]没有极限———p_sscyzsjl|888888|888888|888888|888888|888|888|888888|888888|888|8|360|8}
+史诗丑牛精灵[8]没有极限———p_sscycnjl|888888|888888|888888|888888|888|888|888888|888888|888|8|360|8}
+
+
+
+头衔
+史诗射日英雄[7]——_sryxss|zbtx|0|||10|10|10|10|10|0.08|12|10|false|false|false|false|false|0|0|1|0|0|0|0|0}
+史诗乱世英雄[7]——_lsyxss|zbtx|0|||10|10|10|10|0.08|0.08|10|10|false|false|false|false|false|0|0|1|0|0|0|0|0}
+史诗救世英雄[7]——_jsyxss|zbtx|0|||10|10|10|10|0.09|0.09|10|10|false|false|false|false|false|0|0|1|0|0|0|0|0}
+史诗万圣狂欢头衔[8]——_sswsjkh|zbtx|0|||2e7|2e7|2e7|2e7|2e3|2e3|2e6|2e6|t|t|t|t|t|0|0|1|7|2e3|0|2e5|5}
+史诗光棍节脱光头衔[8]——_ssggjtg|zbtx|0|||2000|2000|150|100|0|0|0|6|false|false|false|false|false|0|0|1|0|0.05|0|0|0}
+造梦三周年[8]——_zmszntx|zbtx|0|||2000|2000|150|100|0|0|0|6|false|false|false|false|false|0|0|1|0|0.05|0|0|0}
+4399忠实玩家[9]——_4399zswj|zbfb|0|||8888|8888|8888|8888|88|88|8888|8888|t|t|t|t|t|8|8|1|8|88|88|0|0}
+史诗乱世星宿[9]——_ssjsxstx|zbfb|0|||8888|8888|8888|8888|88|88|8888|8888|t|t|t|t|t|8|8|1|8|88|88|0|0}
+史诗新年快乐[11]——_zmxyssxnkl|zbtx|0|||88888|88888|88888|88888|88|88|88888|88888|t|t|t|t|t|8|8|1|8|88|8888|0|0}
+4399史诗手机玩家[11]——_4399sssjwj|zbtx|0|||0|0|0|0|0|0|12|8|true|true|true|true|true|8|8|1|8|0|0|0|0}
+造梦英雄[16]——_zmxyanniversary|zbtx|0|||88888|88888|8888|8888|88|88|8888|8888|true|true|true|true|t|8|8|1|8|88|88|88|0}
+
+
+
+
+
+
+
+
+
+
+

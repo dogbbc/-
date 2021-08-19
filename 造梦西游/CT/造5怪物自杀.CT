@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheatTable CheatEngineTableVersion="18">
+  <CheatEntries>
+    <CheatEntry>
+      <ID>2</ID>
+      <Description>"怪物自杀"</Description>
+      <LastState Activated="1"/>
+      <Color>80000008</Color>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>aobscan(gwzs,8D 95 38 FF FF FF 8B 8D 54 FF FF FF 8B 85 5C FF FF FF)
+[ENABLE]
+alloc(newmem,2048)
+label(returnhere)
+label(originalcode)
+label(exit)
+
+newmem:
+cmp [ecx+d8],1
+je exit
+xorpd xmm0,xmm0
+originalcode:
+movq [ecx+00000238],xmm0
+
+exit:
+jmp returnhere
+
+gwzs+3e:
+jmp newmem
+nop
+nop
+nop
+returnhere:
+
+[DISABLE]
+dealloc(newmem)
+gwzs+3e:
+movq [ecx+00000238],xmm0
+</AssemblerScript>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>8</ID>
+      <Description>"福禄寿积分100%"</Description>
+      <LastState Activated="0"/>
+      <Color>80000008</Color>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>aobscan(fls,8B 4D 10 8B 01 F3 0F 7E 80 90 00 00 00 F2 0F 2C C0)
+[ENABLE]
+alloc(newmem,2048)
+label(returnhere)
+label(originalcode)
+label(exit)
+
+newmem:
+mov eax,#100
+originalcode:
+mov [ebp-04],eax
+cmp eax,80000000
+
+exit:
+jmp returnhere
+
+fls+11:
+jmp newmem
+nop
+nop
+nop
+returnhere:
+
+[DISABLE]
+dealloc(newmem)
+fls+11:
+mov [ebp-04],eax
+cmp eax,80000000
+</AssemblerScript>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>10</ID>
+      <Description>"buff时间无限（一次登录未退出）"</Description>
+      <LastState Activated="0"/>
+      <Color>80000008</Color>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>aobscan(buffsj,89 7D E0 8B 58 0C 89 5D DC 8B 43 08)
+[ENABLE]
+alloc(newmem,2048)
+label(returnhere)
+label(originalcode)
+label(exit)
+
+newmem:
+mov eax,#99999
+originalcode:
+mov [edi+20],eax
+test ebx,ebx
+
+exit:
+jmp returnhere
+
+buffsj+18:
+jmp newmem
+returnhere:
+
+
+ 
+ 
+[DISABLE]
+dealloc(newmem)
+buffsj+18:
+mov [edi+20],eax
+test ebx,ebx
+</AssemblerScript>
+    </CheatEntry>
+  </CheatEntries>
+  <UserdefinedSymbols/>
+  <Comments>鍏充簬琛ㄦ牸淇℃伅:
+</Comments>
+</CheatTable>

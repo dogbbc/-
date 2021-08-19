@@ -1,0 +1,1258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheatTable CheatEngineTableVersion="27">
+  <CheatEntries>
+    <CheatEntry>
+      <ID>19</ID>
+      <Description>"造梦西游3CT"</Description>
+      <Options moHideChildren="1" moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+      <LastState Value="" RealAddress="00000000"/>
+      <GroupHeader>1</GroupHeader>
+      <CheatEntries>
+        <CheatEntry>
+          <ID>20</ID>
+          <Description>"人物指针"</Description>
+          <Options moHideChildren="1" moAllowManualCollapseAndExpand="1"/>
+          <LastState/>
+          <VariableType>Auto Assembler Script</VariableType>
+          <AssemblerScript>aobscan(rwzz,8B 10 8B 42 14 8B 4A 18)
+[ENABLE]
+alloc(rwzzdz,4)
+registersymbol(rwzzdz)
+alloc(newmem,2048)
+label(returnhere)
+label(originalcode)
+label(exit)
+
+newmem:
+mov [rwzzdz],edx
+originalcode:
+add eax,ecx
+mov ecx,[ebp-10]
+
+exit:
+jmp returnhere
+
+rwzz+8:
+jmp newmem
+returnhere:
+[DISABLE]
+dealloc(newmem)
+rwzz+8:
+add eax,ecx
+mov ecx,[ebp-10]
+//鍏堟墦寮€涓€娆＄偧涓圭倝锛岀劧鍚庢縺娲绘鑴氭湰
+//鐏甸瓊1鍜?閮芥槸鎺у埗鐏甸瓊鏁伴噺鐨勶紝鍙互鎶婄伒榄?鏀规垚0锛岀伒榄?鏀规垚鎯宠鐨勬暟鍊?
+//绛夌骇1鍜?涔熸槸涓€鏍风殑锛岀瓑绾?鍙互鏀规垚0锛岀瓑绾?鏀规垚鎯宠鐨勭瓑绾?
+//鑱屼笟鍙互鐢ㄦ潵瀹屾垚浜虹墿杞亴锛屾敼瀹岃寰楄亴涓氳寰椾繚瀛?
+</AssemblerScript>
+          <CheatEntries>
+            <CheatEntry>
+              <ID>21</ID>
+              <Description>"灵魂1"</Description>
+              <VariableType>4 Bytes</VariableType>
+              <Address>rwzzdz</Address>
+              <Offsets>
+                <Offset>14</Offset>
+              </Offsets>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>22</ID>
+              <Description>"灵魂2"</Description>
+              <VariableType>4 Bytes</VariableType>
+              <Address>rwzzdz</Address>
+              <Offsets>
+                <Offset>18</Offset>
+              </Offsets>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>23</ID>
+              <Description>"等级1"</Description>
+              <VariableType>4 Bytes</VariableType>
+              <Address>rwzzdz</Address>
+              <Offsets>
+                <Offset>24</Offset>
+              </Offsets>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>24</ID>
+              <Description>"等级2"</Description>
+              <VariableType>4 Bytes</VariableType>
+              <Address>rwzzdz</Address>
+              <Offsets>
+                <Offset>28</Offset>
+              </Offsets>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>25</ID>
+              <Description>"职业（1悟空2唐僧3八戒4沙僧）"</Description>
+              <VariableType>4 Bytes</VariableType>
+              <Address>rwzzdz</Address>
+              <Offsets>
+                <Offset>44</Offset>
+              </Offsets>
+            </CheatEntry>
+          </CheatEntries>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>43</ID>
+          <Description>"传说装备重铸指针"</Description>
+          <Options moHideChildren="1" moAllowManualCollapseAndExpand="1"/>
+          <LastState/>
+          <VariableType>Auto Assembler Script</VariableType>
+          <AssemblerScript>[ENABLE]
+aobscan(czdz,F2 0F 2A D2 F2 0F 59 C2 F2)
+registersymbol(czdz)
+ 
+ 
+[DISABLE]
+//浣滅敤锛氬彲浠ヨ閲嶉摳杩囩殑浼犺瑁呭涓存椂涓存椂鍙樻垚寮傛鍏冭澶?骞朵笖鍙互绌挎埓浣跨敤
+//鐢ㄦ硶锛氶紶鏍囧厛鍦ㄤ竴浠堕噸閾歌繃鐨勪紶璇磋澶囦笂鐐逛竴涓嬶紝鐒跺悗鍥炲埌ce閲岀偣婵€娲?
+//杩欐椂鍙互鐪嬪埌ct瀛愰」灞曞紑锛屽苟涓旀寜鐓ф父鎴忕殑灞炴€ф帓搴忔樉绀虹敓鍛介瓟娉曚粈涔堢殑
+//骞朵笖鍚庨潰鐨勬暟瀛楅兘鏄?.1 锛屾垜浠彲浠ラ€氳繃鏇存敼鏁板瓧鏉ユ敼鍙樿澶囩殑灞炴€э紝姣斿鍙互鏀规垚9999
+//鏀瑰畬涔嬪悗鍙互鐪嬪埌瑁呭灞炴€у彉寰楅潪甯搁珮
+//杩欎釜ct鏈変釜缂虹偣鏄繀椤昏鏈夊睘鎬ф墠鍙互璁╅偅涓睘鎬х壒鍒珮锛屾瘮濡備竴浠惰澶囨病鏈夐瓟鎶楋紝灏辩畻鐢ㄨ繖涓猚t涔熶笉浼氬嚭鐜伴瓟鎶?
+//鐢ㄥ畬杩欎釜ct涔嬪悗闇€瑕佹妸鏀圭殑鏁板瓧杩樺師鎴?.1锛屽惁鍒欒澶囧睘鎬у湪淇濆瓨涔嬪悗浼氬洜涓鸿秴杩囨父鎴忚瀹氭暟鍊艰€屾秷澶?
+//鎭㈠姝ｅ父涔嬪悗淇濆瓨娓告垙 鍙栨秷婵€娲诲嵆鍙叧闂璫t
+</AssemblerScript>
+          <CheatEntries>
+            <CheatEntry>
+              <ID>44</ID>
+              <Description>"生命"</Description>
+              <VariableType>Double</VariableType>
+              <Address>czdz+c</Address>
+              <Offsets>
+                <Offset>FFFFFD38</Offset>
+              </Offsets>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>45</ID>
+              <Description>"魔法"</Description>
+              <VariableType>Double</VariableType>
+              <Address>czdz+c</Address>
+              <Offsets>
+                <Offset>FFFFFDA0</Offset>
+              </Offsets>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>46</ID>
+              <Description>"攻击"</Description>
+              <VariableType>Double</VariableType>
+              <Address>czdz+c</Address>
+              <Offsets>
+                <Offset>FFFFFDF0</Offset>
+              </Offsets>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>47</ID>
+              <Description>"防御"</Description>
+              <VariableType>Double</VariableType>
+              <Address>czdz+c</Address>
+              <Offsets>
+                <Offset>FFFFFE40</Offset>
+              </Offsets>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>48</ID>
+              <Description>"暴击"</Description>
+              <VariableType>Double</VariableType>
+              <Address>czdz+c</Address>
+              <Offsets>
+                <Offset>FFFFFE98</Offset>
+              </Offsets>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>49</ID>
+              <Description>"闪避"</Description>
+              <VariableType>Double</VariableType>
+              <Address>czdz+c</Address>
+              <Offsets>
+                <Offset>FFFFFEF0</Offset>
+              </Offsets>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>50</ID>
+              <Description>"回血"</Description>
+              <VariableType>Double</VariableType>
+              <Address>czdz+c</Address>
+              <Offsets>
+                <Offset>FFFFFF40</Offset>
+              </Offsets>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>51</ID>
+              <Description>"回魔"</Description>
+              <VariableType>Double</VariableType>
+              <Address>czdz+c</Address>
+              <Offsets>
+                <Offset>FFFFFF90</Offset>
+              </Offsets>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>52</ID>
+              <Description>"魔抗"</Description>
+              <VariableType>Double</VariableType>
+              <Address>czdz+c</Address>
+              <Offsets>
+                <Offset>0</Offset>
+              </Offsets>
+            </CheatEntry>
+          </CheatEntries>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>12</ID>
+          <Description>"强化等级（先强化成功一次再激活）"</Description>
+          <Options moHideChildren="1" moAllowManualCollapseAndExpand="1"/>
+          <LastState Value="" RealAddress="00000000"/>
+          <GroupHeader>1</GroupHeader>
+          <CheatEntries>
+            <CheatEntry>
+              <ID>13</ID>
+              <Description>"强化+1装备直接+7"</Description>
+              <LastState/>
+              <VariableType>Auto Assembler Script</VariableType>
+              <AssemblerScript>aobscan(qh,52 6A 00 51 FF D0 83 C4 10 8B 55 FC 8B 4D E0)
+[ENABLE]
+alloc(newmem,2048)
+label(returnhere)
+label(originalcode)
+label(exit)
+
+newmem:
+mov ecx,#6
+originalcode:
+add eax,ecx
+mov ecx,[ebx+00000128]
+
+exit:
+jmp returnhere
+
+qh+f:
+jmp newmem
+nop
+nop
+nop
+returnhere:
+[DISABLE]
+dealloc(newmem)
+qh+f:
+add eax,ecx
+mov ecx,[ebx+00000128]
+</AssemblerScript>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>53</ID>
+              <Description>"强化+2装备直接+7"</Description>
+              <LastState/>
+              <VariableType>Auto Assembler Script</VariableType>
+              <AssemblerScript>aobscan(qh,52 6A 00 51 FF D0 83 C4 10 8B 55 FC 8B 4D E0)
+[ENABLE]
+alloc(newmem,2048)
+label(returnhere)
+label(originalcode)
+label(exit)
+
+newmem:
+mov ecx,#5
+originalcode:
+add eax,ecx
+mov ecx,[ebx+00000128]
+
+exit:
+jmp returnhere
+
+qh+f:
+jmp newmem
+nop
+nop
+nop
+returnhere:
+[DISABLE]
+dealloc(newmem)
+qh+f:
+add eax,ecx
+mov ecx,[ebx+00000128]
+</AssemblerScript>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>14</ID>
+              <Description>"强化+3装备直接+7"</Description>
+              <LastState/>
+              <VariableType>Auto Assembler Script</VariableType>
+              <AssemblerScript>aobscan(qh,52 6A 00 51 FF D0 83 C4 10 8B 55 FC 8B 4D E0)
+[ENABLE]
+alloc(newmem,2048)
+label(returnhere)
+label(originalcode)
+label(exit)
+
+newmem:
+mov ecx,#4
+originalcode:
+add eax,ecx
+mov ecx,[ebx+00000128]
+
+exit:
+jmp returnhere
+
+qh+f:
+jmp newmem
+nop
+nop
+nop
+returnhere:
+[DISABLE]
+dealloc(newmem)
+qh+f:
+add eax,ecx
+mov ecx,[ebx+00000128]
+</AssemblerScript>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>15</ID>
+              <Description>"强化+4装备直接+7"</Description>
+              <LastState/>
+              <VariableType>Auto Assembler Script</VariableType>
+              <AssemblerScript>aobscan(qh,52 6A 00 51 FF D0 83 C4 10 8B 55 FC 8B 4D E0)
+[ENABLE]
+alloc(newmem,2048)
+label(returnhere)
+label(originalcode)
+label(exit)
+
+newmem:
+mov ecx,#3
+originalcode:
+add eax,ecx
+mov ecx,[ebx+00000128]
+
+exit:
+jmp returnhere
+
+qh+f:
+jmp newmem
+nop
+nop
+nop
+returnhere:
+[DISABLE]
+dealloc(newmem)
+qh+f:
+add eax,ecx
+mov ecx,[ebx+00000128]
+</AssemblerScript>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>16</ID>
+              <Description>"强化+5装备直接+7"</Description>
+              <LastState/>
+              <VariableType>Auto Assembler Script</VariableType>
+              <AssemblerScript>aobscan(qh,52 6A 00 51 FF D0 83 C4 10 8B 55 FC 8B 4D E0)
+[ENABLE]
+alloc(newmem,2048)
+label(returnhere)
+label(originalcode)
+label(exit)
+
+newmem:
+mov ecx,#2
+originalcode:
+add eax,ecx
+mov ecx,[ebx+00000128]
+
+exit:
+jmp returnhere
+
+qh+f:
+jmp newmem
+nop
+nop
+nop
+returnhere:
+[DISABLE]
+dealloc(newmem)
+qh+f:
+add eax,ecx
+mov ecx,[ebx+00000128]
+</AssemblerScript>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>17</ID>
+              <Description>"强化+6装备直接+7"</Description>
+              <LastState/>
+              <VariableType>Auto Assembler Script</VariableType>
+              <AssemblerScript>aobscan(qh,52 6A 00 51 FF D0 83 C4 10 8B 55 FC 8B 4D E0)
+[ENABLE]
+alloc(newmem,2048)
+label(returnhere)
+label(originalcode)
+label(exit)
+
+newmem:
+mov ecx,#1
+originalcode:
+add eax,ecx
+mov ecx,[ebx+00000128]
+
+exit:
+jmp returnhere
+
+qh+f:
+jmp newmem
+nop
+nop
+nop
+returnhere:
+[DISABLE]
+dealloc(newmem)
+qh+f:
+add eax,ecx
+mov ecx,[ebx+00000128]
+</AssemblerScript>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>18</ID>
+              <Description>"强化直接+9999(慎用)"</Description>
+              <LastState/>
+              <VariableType>Auto Assembler Script</VariableType>
+              <AssemblerScript>aobscan(qh,52 6A 00 51 FF D0 83 C4 10 8B 55 FC 8B 4D E0)
+[ENABLE]
+alloc(newmem,2048)
+label(returnhere)
+label(originalcode)
+label(exit)
+
+newmem:
+mov ecx,#9999
+originalcode:
+add eax,ecx
+mov ecx,[ebx+00000128]
+
+exit:
+jmp returnhere
+
+qh+f:
+jmp newmem
+nop
+nop
+nop
+returnhere:
+[DISABLE]
+dealloc(newmem)
+qh+f:
+add eax,ecx
+mov ecx,[ebx+00000128]
+</AssemblerScript>
+            </CheatEntry>
+          </CheatEntries>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>54</ID>
+          <Description>"各种数量次数999"</Description>
+          <Options moHideChildren="1" moAllowManualCollapseAndExpand="1"/>
+          <LastState Value="" RealAddress="00000000"/>
+          <GroupHeader>1</GroupHeader>
+          <CheatEntries>
+            <CheatEntry>
+              <ID>55</ID>
+              <Description>"昆仑山世界传送999"</Description>
+              <LastState/>
+              <VariableType>Auto Assembler Script</VariableType>
+              <AssemblerScript>aobscan(sjcs,F3 0F 7E 45 90 66 0F D6 45 88 F3 0F 7E 45 88)
+[ENABLE]
+alloc(newmem,2048)
+label(returnhere)
+label(originalcode)
+label(exit)
+
+newmem:
+xorpd xmm0,xmm0
+mov eax,#999
+originalcode:
+cvtsi2sd xmm1,eax
+addsd xmm0,xmm1
+
+exit:
+jmp returnhere
+
+sjcs+18:
+jmp newmem
+nop
+nop
+nop
+returnhere:
+
+[DISABLE]
+dealloc(newmem)
+sjcs+18:
+cvtsi2sd xmm1,eax
+addsd xmm0,xmm1
+//淇敼鏉′欢锛氳嚜韬笘鐣屼紶閫佹鏁板ぇ浜?娆?
+//鍏蜂綋鐢ㄦ硶锛氬厛鍘绘槅浠戝北鐢ㄤ竴娆′笘鐣屼紶閫侊紝鐒跺悗鍦╟e閲屼笘鐣屼紶閫佹鏁?99鍓嶉潰鐨勬柟妗嗙偣鍑绘縺娲?
+//涔嬪悗鍐嶅幓鐢ㄤ竴娆′笘鐣屼紶閫侊紝鐒跺悗鍥炲埌鏄嗕粦灞变箣鍚庡彲浠ョ湅鍒颁紶閫佹鏁板彉鎴愪簡999
+//鏀瑰畬鐐瑰嚮淇濆瓨锛屽彇娑堟縺娲诲嵆鍙叧闂璫t
+</AssemblerScript>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>11</ID>
+              <Description>"宠物强化点99999"</Description>
+              <LastState/>
+              <VariableType>Auto Assembler Script</VariableType>
+              <AssemblerScript>aobscan(qhd,F3 0F 7E 45 D8 66 0F D6 45 D0 F3 0F 7E 45 D0)
+[ENABLE]
+alloc(newmem,2048)
+label(returnhere)
+label(originalcode)
+label(exit)
+
+newmem:
+xorpd xmm0,xmm0
+mov eax,#99999
+originalcode:
+cvtsi2sd xmm1,eax
+addsd xmm0,xmm1
+
+exit:
+jmp returnhere
+
+qhd+18:
+jmp newmem
+nop
+nop
+nop
+returnhere:
+
+[DISABLE]
+dealloc(newmem)
+qhd+18:
+cvtsi2sd xmm1,eax
+addsd xmm0,xmm1
+//淇敼鏉′欢锛氳嚜韬疇鐗╁己鍖栫偣澶т簬2鐐?
+//鍏蜂綋鐢ㄦ硶锛氬厛鍘诲疇鐗╄儗鍖呭己鍖栦竴娆″疇鐗╄澶囷紝鐒跺悗鍦╟e閲屽疇鐗╁己鍖栫偣99999鍓嶉潰鐨勬柟妗嗙偣鍑绘縺娲讳箣鍚庡啀鍘诲己鍖栦竴娆″疇鐗╄澶?
+//杩欐椂寮哄寲鐐规暟灏卞彉鎴愪簡99999锛屾敼瀹屼繚瀛樻父鎴忥紝鍙栨秷婵€娲诲嵆鍙叧闂璫t
+</AssemblerScript>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>56</ID>
+              <Description>"道具数量9999"</Description>
+              <LastState/>
+              <VariableType>Auto Assembler Script</VariableType>
+              <AssemblerScript>aobscan(dj,8B 8B C0 00 00 00 8B 5D FC)
+[ENABLE]
+alloc(newmem,2048)
+label(returnhere)
+label(originalcode)
+label(exit)
+newmem:
+mov eax,#9999
+originalcode:
+mov [ebp-14],eax
+mov eax,[ecx+04]
+exit:
+jmp returnhere
+dj+f:
+jmp newmem
+nop
+returnhere:
+[DISABLE]
+dealloc(newmem)
+dj+f:
+mov [ebp-14],eax
+mov eax,[ecx+04]
+//淇敼鏉′欢锛氭墍鏀归亾鍏风殑鏁伴噺澶т簬2涓?
+//鍏蜂綋鐢ㄦ硶锛氭墦寮€鐐间腹鐐夛紝鎶婇渶瑕佹敼鍙樻暟閲忕殑閬撳叿鏀捐繘鍚堟垚閲?涓紝鐒跺悗鍦╟e閲岄亾鍏锋暟閲?999鍓嶉潰鐨勬柟妗嗙偣鍑绘縺娲?
+//涔嬪悗鍙栦笅鏀捐繘鍚堟垚閲岀殑閬撳叿锛岄亾鍏锋暟閲忓彉鎴?999锛屽叾浠栭亾鍏蜂篃鍙互渚濇鏀惧叆鍚堟垚閲岋紝鍗冲彲淇敼閬撳叿鏁伴噺9999
+//鏀瑰畬淇濆瓨娓告垙锛屽彇娑堟縺娲诲嵆鍙叧闂璫t
+</AssemblerScript>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>57</ID>
+              <Description>"神秘商店次数99999"</Description>
+              <LastState/>
+              <VariableType>Auto Assembler Script</VariableType>
+              <AssemblerScript>aobscan(smsd,8B 55 98 8B 4D 9C 8B 45 A0 57 8B 7D 8C 52 51)
+[ENABLE]
+alloc(newmem,2048)
+label(returnhere)
+label(originalcode)
+label(exit)
+
+newmem:
+xorpd xmm0,xmm0
+mov eax,#99999
+originalcode:
+cvtsi2sd xmm1,eax
+addsd xmm0,xmm1
+
+exit:
+jmp returnhere
+
+smsd-34:
+jmp newmem
+nop
+nop
+nop
+returnhere:
+
+[DISABLE]
+dealloc(newmem)
+smsd-34:
+cvtsi2sd xmm1,eax
+subsd xmm0,xmm1
+//淇敼鏉′欢锛氳嚜韬绉樺晢搴楁鏁板ぇ浜?娆?
+//鍏蜂綋鐢ㄦ硶锛氬厛鍘荤绉樺晢搴楄喘涔?娆★紝鐒跺悗鍦╟e閲岀绉樺晢搴楁鏁?9999鍓嶉潰鐨勬柟妗嗙偣鍑绘縺娲?
+//涔嬪悗鍐嶅幓璐拱1娆★紝杩欐椂鍟嗗簵璐拱娆℃暟灏卞彉鎴愪簡99999锛屼繚瀛樻父鎴忥紝鍙栨秷婵€娲诲嵆鍙叧闂璫t
+</AssemblerScript>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>58</ID>
+              <Description>"灵魂数量9999999"</Description>
+              <LastState/>
+              <VariableType>Auto Assembler Script</VariableType>
+              <AssemblerScript>aobscan(lh,8B 45 10 8B 10 8B 42 14)
+[ENABLE]
+alloc(newmem,2048)
+label(returnhere)
+label(originalcode)
+label(exit)
+
+newmem:
+xor ecx,ecx
+mov eax,#9999999
+originalcode:
+add eax,ecx
+mov ecx,[ebp-10]
+
+exit:
+jmp returnhere
+
+lh+b:
+jmp newmem
+returnhere:
+
+
+ 
+ 
+[DISABLE]
+dealloc(newmem)
+lh+b:
+add eax,ecx
+mov ecx,[ebp-10]
+//鏃犱慨鏀归檺鍒舵潯浠讹紝鍏蜂綋鐢ㄦ硶锛氬厛鎵撳紑涓€娆＄偧涓圭倝
+//鐒跺悗鍘籧e閲岀伒榄傛暟閲?999999鍓嶉潰鐨勬柟妗嗙偣鍑绘縺娲伙紝涔嬪悗鍐嶆墦寮€涓€娆＄偧涓圭倝鍙互鐪嬪埌鐏甸瓊鏁伴噺鍙樻垚浜?999999
+//淇濆瓨娓告垙锛屽彇娑堟縺娲诲嵆鍙叧闂璫t
+</AssemblerScript>
+            </CheatEntry>
+          </CheatEntries>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>59</ID>
+          <Description>"win10VIP等级5"</Description>
+          <LastState/>
+          <VariableType>Auto Assembler Script</VariableType>
+          <AssemblerScript>aobscan(vp,FF D0 83 C4 10 8B 4D DC 8B 41 14 85)
+[ENABLE]
+alloc(newmem,2048)
+label(returnhere)
+label(originalcode)
+label(exit)
+
+newmem:
+mov eax,#5
+shl eax,3
+add,eax,6
+originalcode:
+add esp,10
+mov ecx,[ebp-24]
+
+exit:
+jmp returnhere
+
+vp+3b:
+jmp newmem
+nop
+returnhere:
+
+
+ 
+ 
+[DISABLE]
+dealloc(newmem)
+vp+3b:
+add esp,10
+mov ecx,[ebp-24]
+</AssemblerScript>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>60</ID>
+          <Description>"win10免费商城（先购买失败一次）"</Description>
+          <LastState/>
+          <VariableType>Auto Assembler Script</VariableType>
+          <AssemblerScript>[ENABLE]
+aobscan(a,0F 84 ?? ?? ?? ??  8B 5D FC 8B 43 54)
+a:
+db 0F 85
+ 
+ 
+[DISABLE]
+aobscan(b,0F 85 ?? ?? ?? ??  8B 5D FC 8B 43 54)
+b:
+db 0F 84
+</AssemblerScript>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>61</ID>
+          <Description>"buff时间最大值"</Description>
+          <LastState/>
+          <VariableType>Auto Assembler Script</VariableType>
+          <AssemblerScript>[ENABLE]
+aobscan(a,89 48 54 8B 48 54 B8 04 00 00 00)
+a:
+db 01 48 54 8B 48 54 B8 04 00 00 00
+[DISABLE]
+aobscan(b,01 48 54 8B 48 54 B8 04 00 00 00)
+b:
+db 89 48 54 8B 48 54 B8 04 00 00 00
+
+</AssemblerScript>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>7</ID>
+          <Description>"无限9周年蛋糕{活动已过期，废弃}"</Description>
+          <LastState/>
+          <VariableType>Auto Assembler Script</VariableType>
+          <AssemblerScript>aobscan(dg,8B 01 89 45 AC 8B 48 68)
+[ENABLE]
+dg+e8:
+cmp ecx,ecx
+[DISABLE]
+dg+e8:
+test ecx,ecx
+
+</AssemblerScript>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>62</ID>
+          <Description>"法宝技能无cd（用一次法宝之后激活）"</Description>
+          <LastState/>
+          <VariableType>Auto Assembler Script</VariableType>
+          <AssemblerScript>{ Game   : 造梦西游3桌面版.exe
+  Version: 
+  Date   : 2020-03-12
+  Author : Administrator
+
+  This script does blah blah blah
+}
+
+[ENABLE]
+
+aobscan(INJECT,8B C8 83 E1 07 83 F9 06 75 21 8B 8D 3C) // should be unique
+alloc(newmem,$1000)
+
+label(code)
+label(return)
+
+newmem:
+
+code:
+  mov ecx,3539053052
+  cvtsi2sd xmm0,ecx
+  addsd xmm1,xmm1
+  addsd xmm1,xmm1
+  addsd xmm1,xmm1
+  addsd xmm1,xmm0
+  mov ecx,eax
+  and ecx,07
+  jmp return
+
+INJECT:
+  jmp newmem
+return:
+registersymbol(INJECT)
+
+[DISABLE]
+
+INJECT:
+  db 8B C8 83 E1 07
+
+unregistersymbol(INJECT)
+dealloc(newmem)
+
+{
+// ORIGINAL CODE - INJECTION POINT: 1A2DEB5B
+
+1A2DEB2F: 89 95 44 FF FF FF        -  mov [ebp-000000BC],edx
+1A2DEB35: 51                       -  push ecx
+1A2DEB36: 6A 00                    -  push 00
+1A2DEB38: 50                       -  push eax
+1A2DEB39: FF B5 5C FF FF FF        -  push [ebp-000000A4]
+1A2DEB3F: E8 DC 71 40 5F           -  call Flash.ocx+9C5D20
+1A2DEB44: 83 C4 10                 -  add esp,10
+1A2DEB47: 8B 95 4C FF FF FF        -  mov edx,[ebp-000000B4]
+1A2DEB4D: 89 85 3C FF FF FF        -  mov [ebp-000000C4],eax
+1A2DEB53: F2 0F 10 0D F8 28 D1 0E  -  movsd xmm1,[0ED128F8]
+// ---------- INJECTING HERE ----------
+1A2DEB5B: 8B C8                    -  mov ecx,eax
+1A2DEB5D: 83 E1 07                 -  and ecx,07
+// ---------- DONE INJECTING  ----------
+1A2DEB60: 83 F9 06                 -  cmp ecx,06
+1A2DEB63: 75 21                    -  jne 1A2DEB86
+1A2DEB65: 8B 8D 3C FF FF FF        -  mov ecx,[ebp-000000C4]
+1A2DEB6B: 8B 85 48 FF FF FF        -  mov eax,[ebp-000000B8]
+1A2DEB71: C1 F9 03                 -  sar ecx,03
+1A2DEB74: 66 0F 57 C0              -  xorpd xmm0,xmm0
+1A2DEB78: F2 0F 2A C1              -  cvtsi2sd xmm0,ecx
+1A2DEB7C: 66 0F D6 85 40 FF FF FF  -  movq [ebp-000000C0],xmm0
+1A2DEB84: EB 54                    -  jmp 1A2DEBDA
+1A2DEB86: 83 F9 07                 -  cmp ecx,07
+}
+</AssemblerScript>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>63</ID>
+          <Description>"无限潜力点（先弹出潜力点不够一次）"</Description>
+          <LastState/>
+          <VariableType>Auto Assembler Script</VariableType>
+          <AssemblerScript>aobscan(ql,8B 78 08 8B 8F 54 02 00 00 89 4D D0 89 45 DC)
+[ENABLE]
+alloc(newmem,2048)
+label(returnhere)
+label(originalcode)
+label(exit)
+
+newmem:
+mov eax,#9999
+originalcode:
+mov ecx,eax
+mov eax,[ebp-1C]
+
+exit:
+jmp returnhere
+
+ql-22:
+jmp newmem
+returnhere:
+
+
+ 
+ 
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+dealloc(newmem)
+ql-22:
+mov ecx,eax
+mov eax,[ebp-1C]
+//Alt: db 8B C8 8B 45 E4
+</AssemblerScript>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>64</ID>
+          <Description>"药园宠物还童"</Description>
+          <Options moHideChildren="1" moAllowManualCollapseAndExpand="1"/>
+          <LastState Value="" RealAddress="00000000"/>
+          <GroupHeader>1</GroupHeader>
+          <CheatEntries>
+            <CheatEntry>
+              <ID>1</ID>
+              <Description>"初级当高级用（注意会变成1级）"</Description>
+              <LastState/>
+              <VariableType>Auto Assembler Script</VariableType>
+              <AssemblerScript>aobscan(ht,89 5D 8C 89 75 80 8B 4D 08 8B 5D 0C 8B 45 10 8D 55 90)
+[ENABLE]
+alloc(newmem,2048)
+label(returnhere)
+label(originalcode)
+label(exit)
+
+newmem:
+mov edx,#250
+originalcode:
+mov [ebp-58],edx
+mov edx,ebp
+
+exit:
+jmp returnhere
+
+ht+56:
+jmp newmem
+returnhere:
+
+[DISABLE]
+dealloc(newmem)
+ht+56:
+mov [ebp-58],edx
+mov edx,ebp
+//鍏堣繘琛屼竴娆″垵绾ц繕绔ワ紝涔嬪悗婵€娲昏剼鏈紝鍐嶆杩涜鍒濈骇杩樼灏卞彲浠ヨ揪鍒伴珮绾ц繕绔ョ殑鏁堟灉
+//娉ㄦ剰鍒濈骇杩樼浼氳瀹犵墿鍙樹负1绾?
+</AssemblerScript>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>0</ID>
+              <Description>"定向高级还童+250，具体请点开脚本（血蓝攻）"</Description>
+              <LastState/>
+              <VariableType>Auto Assembler Script</VariableType>
+              <AssemblerScript>[ENABLE]
+aobscan(cjht,8B 85 70 FF FF FF DD 9D 60 FF FF FF F3 0F 7E 85 60 FF FF FF F2 0F 59 C8 66 0F 57 C0 F2 0F 2A C0 F2 0F 58 C1)
+cjht:
+db B8 FA 00 00 00 90 DD 9D 60 FF FF FF F3 0F 7E 85 60 FF FF FF F2 0F 59 C8 66 0F 57 C9 F2 0F 2A C0 F2 0F 58 C1
+
+
+[DISABLE]
+aobscan(gjht,B8 FA 00 00 00 90 DD 9D 60 FF FF FF F3 0F 7E 85 60 FF FF FF F2 0F 59 C8 66 0F 57 C9 F2 0F 2A C0 F2 0F 58 C1)
+gjht:
+db 8B 85 70 FF FF FF DD 9D 60 FF FF FF F3 0F 7E 85 60 FF FF FF F2 0F 59 C8 66 0F 57 C0 F2 0F 2A C0 F2 0F 58 C1
+//浣跨敤涔嬪墠鍏堣繘琛屼竴娆″垵绾ц繕绔?
+//涓婇潰杩欎簺鏄敓鍛界殑瀹氬悜杩樼锛屽叾瀹炶繕鏈夐瓟娉曞拰鏀诲嚮鐨勶紝浠ｇ爜涓€鏍凤紝浣嗘槸ct娌″姙娉曞疄鐜颁竴娆℃敼澶氫釜浠ｇ爜娈碉紝鎵€浠ュ叿浣撲慨鏀硅鎸夌収涓嬮潰璇寸殑鏉?
+//鍦ㄦ悳绱箣鍓嶅厛杩涜涓€娆″垵绾ц繕绔ワ紝涓嬮潰杩欎竴娈垫槸鐢熷懡榄旀硶鏀诲嚮鍏辩敤鐨勶紝鎼滅储绫诲瀷閫夋嫨瀛楄妭鏁扮粍锛屾悳绱㈢殑鏃跺€欏幓鎺夊彲鍐?
+//鐒跺悗鎼滅储浠ｇ爜  8B 85 70 FF FF FF DD 9D 60 FF FF FF F3 0F 7E 85 60 FF FF FF F2 0F 59 C8 66 0F 57 C0 F2 0F 2A C0 F2 0F 58 C1
+//淇敼鎴?       B8 FA 00 00 00 90 DD 9D 60 FF FF FF F3 0F 7E 85 60 FF FF FF F2 0F 59 C8 66 0F 57 C9 F2 0F 2A C0 F2 0F 58 C1
+</AssemblerScript>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>65</ID>
+              <Description>"定向高级还童+250（防御）"</Description>
+              <LastState/>
+              <VariableType>Auto Assembler Script</VariableType>
+              <AssemblerScript>[ENABLE]
+aobscan(fy,F3 0F 7E 8D 60 FF FF FF 8B 85 70 FF FF FF DD 9D 68 FF FF FF F3 0F 7E 85 68 FF FF FF F2 0F 59 C8 66 0F 57 C0 F2 0F 2A C0 F2 0F 58 C1)
+fy:
+db F3 0F 7E 8D 60 FF FF FF B8 FA 00 00 00 90 DD 9D 68 FF FF FF F3 0F 7E 85 68 FF FF FF F2 0F 59 C8 66 0F 57 C9 F2 0F 2A C0 F2 0F 58 C1
+ 
+ 
+[DISABLE]
+aobscan(ht,F3 0F 7E 8D 60 FF FF FF B8 FA 00 00 00 90 DD 9D 68 FF FF FF F3 0F 7E 85 68 FF FF FF F2 0F 59 C8 66 0F 57 C9 F2 0F 2A C0 F2 0F 58 C1)
+ht:
+db F3 0F 7E 8D 60 FF FF FF 8B 85 70 FF FF FF DD 9D 68 FF FF FF F3 0F 7E 85 68 FF FF FF F2 0F 59 C8 66 0F 57 C0 F2 0F 2A C0 F2 0F 58 C1
+//杩涜杩囦竴娆″垵绾ц繕绔ヤ箣鍚庯紝婵€娲诲嵆鍙紝鍐嶆鐐瑰嚮鍒濈骇杩樼灏卞彲浠ュ畾鍚?250鐐归槻寰¤祫璐?
+</AssemblerScript>
+            </CheatEntry>
+          </CheatEntries>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>66</ID>
+          <Description>"联盟修改"</Description>
+          <Options moHideChildren="1" moAllowManualCollapseAndExpand="1"/>
+          <LastState Value="" RealAddress="00000000"/>
+          <GroupHeader>1</GroupHeader>
+          <CheatEntries>
+            <CheatEntry>
+              <ID>67</ID>
+              <Description>"联盟免费扔骰子"</Description>
+              <LastState/>
+              <VariableType>Auto Assembler Script</VariableType>
+              <AssemblerScript>aobscan(tz,8B C3 8B 98 88 00 00 00 85 DB)
+[ENABLE]
+tz-6:
+db 0f 84
+ 
+ 
+[DISABLE]
+tz-6:
+db 0f 8f
+</AssemblerScript>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>10</ID>
+              <Description>"免费联盟商城"</Description>
+              <Options moHideChildren="1" moAllowManualCollapseAndExpand="1"/>
+              <LastState Value="" RealAddress="00000000"/>
+              <GroupHeader>1</GroupHeader>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>6</ID>
+                  <Description>"免费联盟商城第一步"</Description>
+                  <LastState/>
+                  <VariableType>Auto Assembler Script</VariableType>
+                  <AssemblerScript>aobscan(mf,8B 1F 89 5D FC 8B 7E 0C 8B 4F 08)
+[ENABLE]
+alloc(newmem,2048)
+label(returnhere)
+label(originalcode)
+label(exit)
+
+newmem:
+mov eax,#9999999
+originalcode:
+mov [ebp-28],eax
+mov eax,[ebx+08]
+
+exit:
+jmp returnhere
+
+mf+14:
+jmp newmem
+nop
+returnhere:
+
+
+ 
+ 
+[DISABLE]
+dealloc(newmem)
+mf+14:
+mov [ebp-28],eax
+mov eax,[ebx+08]
+
+</AssemblerScript>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>9</ID>
+                  <Description>"免费联盟商城第二步"</Description>
+                  <LastState/>
+                  <VariableType>Auto Assembler Script</VariableType>
+                  <AssemblerScript>aobscan(lmsc,8B 9D 28 FF FF FF 8B 73 24 85 F6)
+[ENABLE]
+lmsc-6:
+db 0f 85
+ 
+[DISABLE]
+lmsc-6:
+db 0f 8d
+</AssemblerScript>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>68</ID>
+              <Description>"无视时间限制进联盟竞技场"</Description>
+              <LastState/>
+              <VariableType>Auto Assembler Script</VariableType>
+              <AssemblerScript>aobscan(jjc,89 4D B8 8B 50 70)
+[ENABLE]
+jjc+11:
+db 39 c9
+
+[DISABLE]
+jjc+11:
+db 85 c9
+</AssemblerScript>
+            </CheatEntry>
+          </CheatEntries>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>69</ID>
+          <Description>"无限l乱世月宫"</Description>
+          <LastState/>
+          <VariableType>Auto Assembler Script</VariableType>
+          <AssemblerScript>aobscan(wxfb,8B 7D E4 8B 8F CC 00 00 00)
+[ENABLE]
+wxfb-6:
+db 0f 84
+[DISABLE]
+wxfb-6:
+db 0f 8f
+</AssemblerScript>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>70</ID>
+          <Description>"无限斗部群星"</Description>
+          <Options moHideChildren="1" moAllowManualCollapseAndExpand="1"/>
+          <LastState Value="" RealAddress="00000000"/>
+          <GroupHeader>1</GroupHeader>
+          <CheatEntries>
+            <CheatEntry>
+              <ID>71</ID>
+              <Description>"斗部第一关（贪狼、巨门、禄存）"</Description>
+              <LastState/>
+              <VariableType>Auto Assembler Script</VariableType>
+              <AssemblerScript>aobscan(tl,8B 4A 14 89 4D E8 8B 48 68)
+[ENABLE]
+tl+62:
+db 0f 84
+
+[DISABLE]
+tl+62:
+db 0f 8f
+</AssemblerScript>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>72</ID>
+              <Description>"斗部第二关（醉酒、聚宝、七香）"</Description>
+              <LastState/>
+              <VariableType>Auto Assembler Script</VariableType>
+              <AssemblerScript>aobscan(jbtg,8B 4B 50 8B 5D FC 89 4D D0 89 55 D8 89 45 DC)
+[ENABLE]
+jbtg+98:
+db 0f 84
+
+[DISABLE]
+jbtg+98:
+db 0f 8f
+</AssemblerScript>
+            </CheatEntry>
+          </CheatEntries>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>73</ID>
+          <Description>"无限进入狰狞药园"</Description>
+          <LastState/>
+          <VariableType>Auto Assembler Script</VariableType>
+          <AssemblerScript>aobscan(znyy,8B 5A 08 8B 8B DC 01 00 00 8B 5D BC 89 4D B0)
+[ENABLE]
+znyy-ec:
+db 75
+ 
+ 
+[DISABLE]
+znyy-ec:
+db 74
+</AssemblerScript>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>74</ID>
+          <Description>"狰狞药园无限时间"</Description>
+          <LastState/>
+          <VariableType>Auto Assembler Script</VariableType>
+          <AssemblerScript>aobscan(znsj,8B 75 90 8B 5E 4C 85 DB)
+[ENABLE]
+alloc(newmem,2048)
+label(returnhere)
+label(originalcode)
+label(exit)
+
+newmem:
+xor ebx,ebx
+mov ebx,#222
+originalcode:
+mov [esi+48],ebx
+mov ebx,[esi+48]
+
+exit:
+jmp returnhere
+
+znsj+1d:
+jmp newmem
+nop
+returnhere:
+[DISABLE]
+dealloc(newmem)
+znsj+1d:
+mov [esi+48],ebx
+mov ebx,[esi+48]
+
+</AssemblerScript>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>2</ID>
+          <Description>"无限领取土地庙祝福"</Description>
+          <LastState/>
+          <VariableType>Auto Assembler Script</VariableType>
+          <AssemblerScript>aobscan(tudi,0F 94 DB 0F B6 DB 89 5D E0 8B 5D E0 85 DB)
+[ENABLE]
+tudi+e:
+db 0f 85
+
+[DISABLE]
+tudi+e:
+db 0f 84
+</AssemblerScript>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>86</ID>
+          <Description>"无限仙女考验"</Description>
+          <LastState/>
+          <VariableType>Auto Assembler Script</VariableType>
+          <AssemblerScript>aobscan(xn,89 4D D4 8D 40 01 89 45 D8 8B C9 8B 05 ?? ?? ?? ?? 89 45 DC 8B 4D DC)
+[ENABLE]
+xn-2d:
+db 0f 84
+[DISABLE]
+xn-2d:
+db 0f 85
+</AssemblerScript>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>82</ID>
+          <Description>"无限天兵考验"</Description>
+          <LastState/>
+          <VariableType>Auto Assembler Script</VariableType>
+          <AssemblerScript>aobscan(tb,8D 40 01 89 45 D8 8D 24 24)
+[ENABLE]
+tb-79:
+db 0f 84
+[DISABLE]
+tb-79:
+db 0f 85
+</AssemblerScript>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>83</ID>
+          <Description>"无限守卫昆仑山"</Description>
+          <LastState/>
+          <VariableType>Auto Assembler Script</VariableType>
+          <AssemblerScript>aobscan(kls,89 45 E4 8B 4A 0C 8B 51 08 8B 4A 14 89 4D E0 8B 48 60)
+[ENABLE]
+kls+72:
+db 0f 84
+[DISABLE]
+kls+72:
+db 0f 85
+</AssemblerScript>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>5</ID>
+          <Description>"星宿阵"</Description>
+          <Options moHideChildren="1" moAllowManualCollapseAndExpand="1"/>
+          <LastState Value="" RealAddress="00000000"/>
+          <GroupHeader>1</GroupHeader>
+          <CheatEntries>
+            <CheatEntry>
+              <ID>3</ID>
+              <Description>"无材料升级朱雀阵"</Description>
+              <LastState/>
+              <VariableType>Auto Assembler Script</VariableType>
+              <AssemblerScript>aobscan(zq,8B D8 8B 45 94 85 DB)
+[ENABLE]
+zq+7:
+db 0f 85
+[DISABLE]
+zq+7:
+db 0f 84
+</AssemblerScript>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>4</ID>
+              <Description>"无材料升级玄武阵"</Description>
+              <LastState/>
+              <VariableType>Auto Assembler Script</VariableType>
+              <AssemblerScript>aobscan(xw,8B 56 34 8B 75 9C 85 D2)
+[ENABLE]
+xw+8:
+db 0f 85
+ 
+ 
+[DISABLE]
+xw+8:
+db 0f 84
+</AssemblerScript>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>8</ID>
+              <Description>"无限领取星宿祝福"</Description>
+              <LastState/>
+              <VariableType>Auto Assembler Script</VariableType>
+              <AssemblerScript>aobscan(xxzf,8B 59 14 8B 90 CC 00 00 00)
+[ENABLE]
+xxzf+1c:
+db 0f 84
+
+[DISABLE]
+xxzf+1c:
+db 0f 85
+</AssemblerScript>
+            </CheatEntry>
+          </CheatEntries>
+        </CheatEntry>
+      </CheatEntries>
+    </CheatEntry>
+  </CheatEntries>
+  <UserdefinedSymbols>
+    <SymbolEntry>
+      <Name>rwzz</Name>
+      <Address>1C5C95D3</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>czdz</Name>
+      <Address>155B8086</Address>
+    </SymbolEntry>
+  </UserdefinedSymbols>
+</CheatTable>

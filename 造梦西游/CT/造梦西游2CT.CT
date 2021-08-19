@@ -1,0 +1,1460 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheatTable CheatEngineTableVersion="18">
+  <CheatEntries>
+    <CheatEntry>
+      <ID>527</ID>
+      <Description>"造2ct"</Description>
+      <Options moHideChildren="1" moAllowManualCollapseAndExpand="1"/>
+      <LastState Value="" Activated="0" RealAddress="00000000"/>
+      <Color>80000008</Color>
+      <GroupHeader>1</GroupHeader>
+      <CheatEntries>
+        <CheatEntry>
+          <ID>69</ID>
+          <Description>"造2道具数量+999"</Description>
+          <LastState Activated="0"/>
+          <Color>80000008</Color>
+          <VariableType>Auto Assembler Script</VariableType>
+          <AssemblerScript>aobscan(djsl,89 5D CC 89 75 B4 8B 5D 08)
+[ENABLE]
+alloc(newmem,2048)
+label(returnhere)
+label(originalcode)
+label(exit)
+newmem:
+mov eax,#999
+originalcode:
+mov [ebp-44],eax
+mov ecx,[ebx+0C]
+exit:
+jmp returnhere
+djsl+3d:
+jmp newmem
+nop
+returnhere:
+[DISABLE]
+dealloc(newmem)
+djsl+3d:
+mov [ebp-44],eax
+mov ecx,[ebx+0C]
+</AssemblerScript>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>528</ID>
+          <Description>"造2强化等级"</Description>
+          <Options moHideChildren="1" moAllowManualCollapseAndExpand="1"/>
+          <LastState Value="" Activated="0" RealAddress="00000000"/>
+          <Color>80000008</Color>
+          <GroupHeader>1</GroupHeader>
+          <CheatEntries>
+            <CheatEntry>
+              <ID>529</ID>
+              <Description>"强化0直接强化+7"</Description>
+              <LastState Activated="0"/>
+              <Color>80000008</Color>
+              <VariableType>Auto Assembler Script</VariableType>
+              <AssemblerScript>aobscan(qh,89 75 CC 8B 41 04)
+[ENABLE]
+alloc(newmem,2048)
+label(returnhere)
+label(originalcode)
+label(exit)
+
+newmem:
+mov eax,#7
+originalcode:
+mov [ebp-48],eax
+mov ecx,[ebx+0C]
+
+exit:
+jmp returnhere
+
+qh+6:
+jmp newmem
+nop
+returnhere:
+
+
+ 
+ 
+[DISABLE]
+dealloc(newmem)
+qh+6:
+mov [ebp-48],eax
+mov ecx,[ebx+0C]
+</AssemblerScript>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>530</ID>
+              <Description>"强化1直接强化+7"</Description>
+              <LastState Activated="0"/>
+              <Color>80000008</Color>
+              <VariableType>Auto Assembler Script</VariableType>
+              <AssemblerScript>aobscan(qh,89 75 CC 8B 41 04)
+[ENABLE]
+alloc(newmem,2048)
+label(returnhere)
+label(originalcode)
+label(exit)
+
+newmem:
+mov eax,#6
+originalcode:
+mov [ebp-48],eax
+mov ecx,[ebx+0C]
+
+exit:
+jmp returnhere
+
+qh+6:
+jmp newmem
+nop
+returnhere:
+
+
+ 
+ 
+[DISABLE]
+dealloc(newmem)
+qh+6:
+mov [ebp-48],eax
+mov ecx,[ebx+0C]
+</AssemblerScript>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>531</ID>
+              <Description>"强化2直接强化+7"</Description>
+              <LastState Activated="0"/>
+              <Color>80000008</Color>
+              <VariableType>Auto Assembler Script</VariableType>
+              <AssemblerScript>aobscan(qh,89 75 CC 8B 41 04)
+[ENABLE]
+alloc(newmem,2048)
+label(returnhere)
+label(originalcode)
+label(exit)
+
+newmem:
+mov eax,#5
+originalcode:
+mov [ebp-48],eax
+mov ecx,[ebx+0C]
+
+exit:
+jmp returnhere
+
+qh+6:
+jmp newmem
+nop
+returnhere:
+
+
+ 
+ 
+[DISABLE]
+dealloc(newmem)
+qh+6:
+mov [ebp-48],eax
+mov ecx,[ebx+0C]
+</AssemblerScript>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>532</ID>
+              <Description>"强化3直接强化+7"</Description>
+              <LastState Activated="0"/>
+              <Color>80000008</Color>
+              <VariableType>Auto Assembler Script</VariableType>
+              <AssemblerScript>aobscan(qh,89 75 CC 8B 41 04)
+[ENABLE]
+alloc(newmem,2048)
+label(returnhere)
+label(originalcode)
+label(exit)
+
+newmem:
+mov eax,#4
+originalcode:
+mov [ebp-48],eax
+mov ecx,[ebx+0C]
+
+exit:
+jmp returnhere
+
+qh+6:
+jmp newmem
+nop
+returnhere:
+
+
+ 
+ 
+[DISABLE]
+dealloc(newmem)
+qh+6:
+mov [ebp-48],eax
+mov ecx,[ebx+0C]
+</AssemblerScript>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>533</ID>
+              <Description>"强化4直接强化+7"</Description>
+              <LastState Activated="0"/>
+              <Color>80000008</Color>
+              <VariableType>Auto Assembler Script</VariableType>
+              <AssemblerScript>aobscan(qh,89 75 CC 8B 41 04)
+[ENABLE]
+alloc(newmem,2048)
+label(returnhere)
+label(originalcode)
+label(exit)
+
+newmem:
+mov eax,#3
+originalcode:
+mov [ebp-48],eax
+mov ecx,[ebx+0C]
+
+exit:
+jmp returnhere
+
+qh+6:
+jmp newmem
+nop
+returnhere:
+
+
+ 
+ 
+[DISABLE]
+dealloc(newmem)
+qh+6:
+mov [ebp-48],eax
+mov ecx,[ebx+0C]
+</AssemblerScript>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>534</ID>
+              <Description>"强化5直接强化+7"</Description>
+              <LastState Activated="0"/>
+              <Color>80000008</Color>
+              <VariableType>Auto Assembler Script</VariableType>
+              <AssemblerScript>aobscan(qh,89 75 CC 8B 41 04)
+[ENABLE]
+alloc(newmem,2048)
+label(returnhere)
+label(originalcode)
+label(exit)
+
+newmem:
+mov eax,#2
+originalcode:
+mov [ebp-48],eax
+mov ecx,[ebx+0C]
+
+exit:
+jmp returnhere
+
+qh+6:
+jmp newmem
+nop
+returnhere:
+
+
+ 
+ 
+[DISABLE]
+dealloc(newmem)
+qh+6:
+mov [ebp-48],eax
+mov ecx,[ebx+0C]
+</AssemblerScript>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>535</ID>
+              <Description>"强化6直接强化+7"</Description>
+              <LastState Activated="0"/>
+              <Color>80000008</Color>
+              <VariableType>Auto Assembler Script</VariableType>
+              <AssemblerScript>aobscan(qh,89 75 CC 8B 41 04)
+[ENABLE]
+alloc(newmem,2048)
+label(returnhere)
+label(originalcode)
+label(exit)
+
+newmem:
+mov eax,#1
+originalcode:
+mov [ebp-48],eax
+mov ecx,[ebx+0C]
+
+exit:
+jmp returnhere
+
+qh+6:
+jmp newmem
+nop
+returnhere:
+
+
+ 
+ 
+[DISABLE]
+dealloc(newmem)
+qh+6:
+mov [ebp-48],eax
+mov ecx,[ebx+0C]
+</AssemblerScript>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>536</ID>
+              <Description>"强化加999"</Description>
+              <LastState Activated="0"/>
+              <Color>80000008</Color>
+              <VariableType>Auto Assembler Script</VariableType>
+              <AssemblerScript>aobscan(qh,89 75 CC 8B 41 04)
+[ENABLE]
+alloc(newmem,2048)
+label(returnhere)
+label(originalcode)
+label(exit)
+
+newmem:
+mov eax,#999
+originalcode:
+mov [ebp-48],eax
+mov ecx,[ebx+0C]
+
+exit:
+jmp returnhere
+
+qh+6:
+jmp newmem
+nop
+returnhere:
+
+
+ 
+ 
+[DISABLE]
+dealloc(newmem)
+qh+6:
+mov [ebp-48],eax
+mov ecx,[ebx+0C]
+</AssemblerScript>
+            </CheatEntry>
+          </CheatEntries>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>56</ID>
+          <Description>"造2装备属性指针"</Description>
+          <Options moHideChildren="1" moAllowManualCollapseAndExpand="1"/>
+          <LastState Activated="0"/>
+          <Color>80000008</Color>
+          <VariableType>Auto Assembler Script</VariableType>
+          <AssemblerScript>aobscan(lh,8B 4D DC 8D 89 6C 7E 00 00 8D 55 F0)
+[ENABLE]
+alloc(p,8)
+registersymbol(p)
+alloc(newmem,2048)
+label(returnhere)
+label(originalcode)
+label(exit)
+newmem:
+push eax
+lea eax,[esi+000000B0]
+mov [p],eax
+pop eax
+originalcode:
+movq xmm0,[esi+000000B0]
+exit:
+jmp returnhere
+lh+1c:
+jmp newmem
+nop
+nop
+nop
+returnhere:
+[DISABLE]
+dealloc(p)
+unregistersymbol(p)
+dealloc(newmem)
+lh+1c:
+movq xmm0,[esi+000000B0]
+</AssemblerScript>
+          <CheatEntries>
+            <CheatEntry>
+              <ID>60</ID>
+              <Description>"吸血"</Description>
+              <LastState Value="??" Activated="0" RealAddress="00000000"/>
+              <Color>80000008</Color>
+              <VariableType>Double</VariableType>
+              <Address>p</Address>
+              <Offsets>
+                <Offset>FFFFFFE8</Offset>
+              </Offsets>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>62</ID>
+              <Description>"回血"</Description>
+              <LastState Value="??" Activated="0" RealAddress="00000000"/>
+              <Color>80000008</Color>
+              <VariableType>Double</VariableType>
+              <Address>p</Address>
+              <Offsets>
+                <Offset>FFFFFFD8</Offset>
+              </Offsets>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>61</ID>
+              <Description>"回魔"</Description>
+              <LastState Value="??" Activated="0" RealAddress="00000000"/>
+              <Color>80000008</Color>
+              <VariableType>Double</VariableType>
+              <Address>p</Address>
+              <Offsets>
+                <Offset>FFFFFFE0</Offset>
+              </Offsets>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>66</ID>
+              <Description>"攻击"</Description>
+              <LastState Value="??" Activated="0" RealAddress="00000000"/>
+              <Color>80000008</Color>
+              <VariableType>Double</VariableType>
+              <Address>p</Address>
+              <Offsets>
+                <Offset>FFFFFFB8</Offset>
+              </Offsets>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>63</ID>
+              <Description>"暴击"</Description>
+              <LastState Value="??" Activated="0" RealAddress="00000000"/>
+              <Color>80000008</Color>
+              <VariableType>Double</VariableType>
+              <Address>p</Address>
+              <Offsets>
+                <Offset>FFFFFFD0</Offset>
+              </Offsets>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>58</ID>
+              <Description>"灵魂"</Description>
+              <LastState Value="??" Activated="0" RealAddress="00000000"/>
+              <Color>80000008</Color>
+              <VariableType>Double</VariableType>
+              <Address>p</Address>
+              <Offsets>
+                <Offset>0</Offset>
+              </Offsets>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>68</ID>
+              <Description>"生命"</Description>
+              <LastState Value="??" Activated="0" RealAddress="00000000"/>
+              <Color>80000008</Color>
+              <VariableType>Double</VariableType>
+              <Address>p</Address>
+              <Offsets>
+                <Offset>FFFFFFA8</Offset>
+              </Offsets>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>57</ID>
+              <Description>"重击"</Description>
+              <LastState Value="??" Activated="0" RealAddress="00000000"/>
+              <Color>80000008</Color>
+              <VariableType>Double</VariableType>
+              <Address>p</Address>
+              <Offsets>
+                <Offset>FFFFFFF8</Offset>
+              </Offsets>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>64</ID>
+              <Description>"闪避"</Description>
+              <LastState Value="??" Activated="0" RealAddress="00000000"/>
+              <Color>80000008</Color>
+              <VariableType>Double</VariableType>
+              <Address>p</Address>
+              <Offsets>
+                <Offset>FFFFFFC8</Offset>
+              </Offsets>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>65</ID>
+              <Description>"防御"</Description>
+              <LastState Value="??" Activated="0" RealAddress="00000000"/>
+              <Color>80000008</Color>
+              <VariableType>Double</VariableType>
+              <Address>p</Address>
+              <Offsets>
+                <Offset>FFFFFFC0</Offset>
+              </Offsets>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>59</ID>
+              <Description>"魔抗"</Description>
+              <LastState Value="??" Activated="0" RealAddress="00000000"/>
+              <Color>80000008</Color>
+              <VariableType>Double</VariableType>
+              <Address>p</Address>
+              <Offsets>
+                <Offset>FFFFFFF0</Offset>
+              </Offsets>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>67</ID>
+              <Description>"魔法"</Description>
+              <LastState Value="??" Activated="0" RealAddress="00000000"/>
+              <Color>80000008</Color>
+              <VariableType>Double</VariableType>
+              <Address>p</Address>
+              <Offsets>
+                <Offset>FFFFFFB0</Offset>
+              </Offsets>
+            </CheatEntry>
+          </CheatEntries>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>47</ID>
+          <Description>"造2buff指针（保存触发,正常时间输入1089782264）"</Description>
+          <Options moHideChildren="1" moAllowManualCollapseAndExpand="1"/>
+          <LastState Activated="0"/>
+          <Color>80000008</Color>
+          <VariableType>Auto Assembler Script</VariableType>
+          <AssemblerScript>aobscan(buff,8B 81 54 01 00 00 89 45 94)
+[ENABLE]
+alloc(t,8)
+registersymbol(t)
+alloc(newmem,2048)
+label(returnhere)
+label(originalcode)
+label(exit)
+newmem:
+push eax
+lea eax,[eax+00000160]
+mov [t],eax
+pop eax
+originalcode:
+movq xmm0,[eax+00000160]
+exit:
+jmp returnhere
+buff+47:
+jmp newmem
+nop
+nop
+nop
+returnhere:
+[DISABLE]
+dealloc(t)
+unregistersymbol(t)
+dealloc(newmem)
+buff+47:
+movq xmm0,[eax+00000160]
+</AssemblerScript>
+          <CheatEntries>
+            <CheatEntry>
+              <ID>29</ID>
+              <Description>"双倍爆率（同喜鹊）"</Description>
+              <LastState Value="??" Activated="0" RealAddress="00000000"/>
+              <Color>80000008</Color>
+              <VariableType>4 Bytes</VariableType>
+              <Address>t</Address>
+              <Offsets>
+                <Offset>4</Offset>
+              </Offsets>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>39</ID>
+              <Description>"回蓝加10（辉煌）"</Description>
+              <LastState Value="??" Activated="0" RealAddress="00000000"/>
+              <Color>80000008</Color>
+              <VariableType>4 Bytes</VariableType>
+              <Address>t</Address>
+              <Offsets>
+                <Offset>4C</Offset>
+              </Offsets>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>36</ID>
+              <Description>"攻击力加100（刑天斧）"</Description>
+              <LastState Value="??" Activated="0" RealAddress="00000000"/>
+              <Color>80000008</Color>
+              <VariableType>4 Bytes</VariableType>
+              <Address>t</Address>
+              <Offsets>
+                <Offset>3C</Offset>
+              </Offsets>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>31</ID>
+              <Description>"攻击力加100（绿色月饼）"</Description>
+              <LastState Value="??" Activated="0" RealAddress="00000000"/>
+              <Color>80000008</Color>
+              <VariableType>4 Bytes</VariableType>
+              <Address>t</Address>
+              <Offsets>
+                <Offset>14</Offset>
+              </Offsets>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>35</ID>
+              <Description>"爆率加50%（黄色月饼）"</Description>
+              <LastState Value="??" Activated="0" RealAddress="00000000"/>
+              <Color>80000008</Color>
+              <VariableType>4 Bytes</VariableType>
+              <Address>t</Address>
+              <Offsets>
+                <Offset>2C</Offset>
+              </Offsets>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>34</ID>
+              <Description>"生命值上限加600（紫色月饼）"</Description>
+              <LastState Value="??" Activated="0" RealAddress="00000000"/>
+              <Color>80000008</Color>
+              <VariableType>4 Bytes</VariableType>
+              <Address>t</Address>
+              <Offsets>
+                <Offset>24</Offset>
+              </Offsets>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>30</ID>
+              <Description>"生命值加50%（顽固的水牛）"</Description>
+              <LastState Value="??" Activated="0" RealAddress="00000000"/>
+              <Color>80000008</Color>
+              <VariableType>4 Bytes</VariableType>
+              <Address>t</Address>
+              <Offsets>
+                <Offset>C</Offset>
+              </Offsets>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>38</ID>
+              <Description>"防御力加100（刑天盾）"</Description>
+              <LastState Value="??" Activated="0" RealAddress="00000000"/>
+              <Color>80000008</Color>
+              <VariableType>4 Bytes</VariableType>
+              <Address>t</Address>
+              <Offsets>
+                <Offset>44</Offset>
+              </Offsets>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>33</ID>
+              <Description>"防御力加50（棕色月饼）"</Description>
+              <LastState Value="??" Activated="0" RealAddress="00000000"/>
+              <Color>80000008</Color>
+              <VariableType>4 Bytes</VariableType>
+              <Address>t</Address>
+              <Offsets>
+                <Offset>1C</Offset>
+              </Offsets>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>37</ID>
+              <Description>"魔法值上限加600（蓝色月饼）"</Description>
+              <LastState Value="??" Activated="0" RealAddress="00000000"/>
+              <Color>80000008</Color>
+              <VariableType>4 Bytes</VariableType>
+              <Address>t</Address>
+              <Offsets>
+                <Offset>34</Offset>
+              </Offsets>
+            </CheatEntry>
+          </CheatEntries>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>526</ID>
+          <Description>"爆率"</Description>
+          <LastState Activated="0"/>
+          <Color>FF0000</Color>
+          <VariableType>Auto Assembler Script</VariableType>
+          <AssemblerScript>aobscan(ah,85 C0 74 0D F2 0F 10 05)
+[ENABLE]
+alloc(newmem,2048)
+label(returnhere)
+label(originalcode)
+label(exit)
+newmem:
+mov [ebp-20],0
+mov [ebp-1C],40F869F0
+originalcode:
+fld qword ptr [ebp-20]
+mov eax,[ebp-40]
+exit:
+jmp returnhere
+ah+11:
+jmp newmem
+nop
+returnhere:
+[DISABLE]
+dealloc(newmem)
+ah+11:
+fld qword ptr [ebp-20]
+mov eax,[ebp-40]
+</AssemblerScript>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>43</ID>
+          <Description>"技能倍数"</Description>
+          <Options moHideChildren="1" moAllowManualCollapseAndExpand="1"/>
+          <LastState Value="" Activated="0" RealAddress="00000000"/>
+          <Color>80000008</Color>
+          <GroupHeader>1</GroupHeader>
+          <CheatEntries>
+            <CheatEntry>
+              <ID>0</ID>
+              <Description>"造2玄冰阵技能倍数"</Description>
+              <LastState Activated="0"/>
+              <Color>80000008</Color>
+              <VariableType>Auto Assembler Script</VariableType>
+              <AssemblerScript>aobscan(tzm,F2 0F 5E C1 F3 0F 7E 4D A8 F2 0F 59 C1 8B 45 B0 66 0F 57 C9 F2 0F 2A C8 F2 0F 59 C1)
+[ENABLE]
+alloc(newmem,2048)
+label(returnhere)
+label(originalcode)
+label(exit)
+
+newmem:
+mulsd xmm1,xmm1
+mulsd xmm1,xmm0
+originalcode:
+mulsd xmm0,xmm1
+movq xmm1,[ebp-58]
+
+exit:
+jmp returnhere
+
+tzm+e7:
+jmp newmem
+nop
+nop
+nop
+nop
+returnhere:
+
+
+ 
+ 
+[DISABLE]
+dealloc(newmem)
+tzm+e7:
+mulsd xmm0,xmm1
+movq xmm1,[ebp-58]
+</AssemblerScript>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>41</ID>
+              <Description>"造2碎石破技能倍数"</Description>
+              <LastState Activated="0"/>
+              <Color>80000008</Color>
+              <VariableType>Auto Assembler Script</VariableType>
+              <AssemblerScript>aobscan(tzm,66 0F 57 C0 F2 0F 2A C0 F2 0F 59 C1 8B 45 B0 66 0F 57 C9 F2 0F 2A C8 F2 0F 59 C1)
+[ENABLE]
+alloc(newmem,2048)
+label(returnhere)
+label(originalcode)
+label(exit)
+
+newmem:
+mulsd xmm1,xmm1
+mulsd xmm1,xmm0
+originalcode:
+mulsd xmm0,xmm1
+movq xmm1,[ebp-58]
+
+exit:
+jmp returnhere
+
+tzm+e4:
+jmp newmem
+nop
+nop
+nop
+nop
+returnhere:
+
+
+ 
+ 
+[DISABLE]
+dealloc(newmem)
+tzm+e4:
+mulsd xmm0,xmm1
+movq xmm1,[ebp-58]
+</AssemblerScript>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>42</ID>
+              <Description>"造2烈焰风暴技能倍数"</Description>
+              <LastState Activated="0"/>
+              <Color>80000008</Color>
+              <VariableType>Auto Assembler Script</VariableType>
+              <AssemblerScript>aobscan(tzm,66 0F 57 C9 F2 0F 2A C8 F2 0F 59 C1 8B 45 B0 66 0F 57 C9 F2 0F 2A C8 F2 0F 59 C1 F2 0F 2C C0)
+[ENABLE]
+alloc(newmem,2048)
+label(returnhere)
+label(originalcode)
+label(exit)
+
+newmem:
+xorpd xmm0,xmm0
+mov eax,#99999
+originalcode:
+cvtsi2sd xmm0,eax
+mulsd xmm0,xmm1
+
+exit:
+jmp returnhere
+
+tzm+1e0:
+jmp newmem
+nop
+nop
+nop
+returnhere:
+
+
+ 
+ 
+[DISABLE]
+dealloc(newmem)
+tzm+1e0:
+cvtsi2sd xmm0,eax
+mulsd xmm0,xmm1
+</AssemblerScript>
+            </CheatEntry>
+          </CheatEntries>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>559</ID>
+          <Description>"秒杀"</Description>
+          <Options moHideChildren="1" moAllowManualCollapseAndExpand="1"/>
+          <LastState Value="" Activated="0" RealAddress="00000000"/>
+          <Color>80000008</Color>
+          <GroupHeader>1</GroupHeader>
+          <CheatEntries>
+            <CheatEntry>
+              <ID>1</ID>
+              <Description>"唐僧秒杀9999999"</Description>
+              <LastState Activated="0"/>
+              <Color>80000008</Color>
+              <VariableType>Auto Assembler Script</VariableType>
+              <AssemblerScript>aobscan(tsms,8D 8D 30 FF FF FF 8B 85 58 FF FF FF 8D 09)
+[ENABLE]
+alloc(newmem,2048)
+label(returnhere)
+label(originalcode)
+label(exit)
+
+newmem:
+xor eax,eax
+mov eax,#999999
+originalcode:
+mov [ebp-000000A8],eax
+
+exit:
+jmp returnhere
+
+tsms+20:
+jmp newmem
+nop
+returnhere:
+[DISABLE]
+dealloc(newmem)
+tsms+20:
+mov [ebp-000000A8],eax
+</AssemblerScript>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>537</ID>
+              <Description>"造2悟空八戒秒杀伤害999999"</Description>
+              <LastState Activated="0"/>
+              <Color>80000008</Color>
+              <VariableType>Auto Assembler Script</VariableType>
+              <AssemblerScript>aobscan(tzm,8B 43 14 8B 7B 18 66 0F 57 C0 F2 0F 2A C0 66 0F 57 C9)
+[ENABLE]
+alloc(newmem,2048)
+label(returnhere)
+label(originalcode)
+label(exit)
+
+newmem:
+mov eax,#999999
+originalcode:
+mov [ebx+14],eax
+mov ecx,[ebx+24]
+
+exit:
+jmp returnhere
+
+tzm-74:
+jmp newmem
+nop
+returnhere:
+
+
+ 
+ 
+[DISABLE]
+tzm-74:
+mov [ebx+14],eax
+mov ecx,[ebx+24]
+</AssemblerScript>
+            </CheatEntry>
+          </CheatEntries>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>2</ID>
+          <Description>"造2过检测（保存游戏之前记得把变态装备脱了）"</Description>
+          <LastState Activated="0"/>
+          <Color>80000008</Color>
+          <VariableType>Auto Assembler Script</VariableType>
+          <AssemblerScript>aobscan(gjc,8B 50 14 8D 52 01)
+[ENABLE]
+gjc+f:
+db 90 e9
+[DISABLE]
+gjc+f:
+db 0f 8c
+</AssemblerScript>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>550</ID>
+          <Description>"免费商城（五种不同方式，选一种用）"</Description>
+          <Options moHideChildren="1" moAllowManualCollapseAndExpand="1"/>
+          <LastState Value="" Activated="0" RealAddress="00000000"/>
+          <Color>80000008</Color>
+          <GroupHeader>1</GroupHeader>
+          <CheatEntries>
+            <CheatEntry>
+              <ID>551</ID>
+              <Description>"购买价格变为0"</Description>
+              <LastState Activated="0"/>
+              <Color>80000008</Color>
+              <VariableType>Auto Assembler Script</VariableType>
+              <AssemblerScript>aobscan(mfsc,8B 95 68 FF FF FF 8B 4D 08 8B 85 70 FF FF FF)
+[ENABLE]
+alloc(newmem,2048)
+label(returnhere)
+label(originalcode)
+label(exit)
+newmem:
+mov [ebp-00000088],#0
+originalcode:
+mov ecx,[ebp-00000088]
+exit:
+jmp returnhere
+mfsc+24:
+jmp newmem
+nop
+returnhere:
+[DISABLE]
+dealloc(newmem)
+mfsc+24:
+mov ecx,[ebp-00000088]
+</AssemblerScript>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>552</ID>
+              <Description>"先扣战功为0"</Description>
+              <LastState Activated="0"/>
+              <Color>80000008</Color>
+              <VariableType>Auto Assembler Script</VariableType>
+              <AssemblerScript>aobscan(dj,8B C8 8B 85 7C FF FF FF 89 8D 68 FF FF FF)
+[ENABLE]
+
+dj+6f:
+db 0f 85
+[DISABLE]
+dj+6f:
+db 0f 8d
+</AssemblerScript>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>553</ID>
+              <Description>"购买成功之后激活（自身要有至少60战功）"</Description>
+              <LastState Activated="0"/>
+              <Color>80000008</Color>
+              <VariableType>Auto Assembler Script</VariableType>
+              <AssemblerScript>aobscan(zg,89 46 60 8B 7E 64 85 FF)
+[ENABLE]
+alloc(newmem,2048)
+label(returnhere)
+label(originalcode)
+label(exit)
+
+newmem:
+mov [edi+38],#99999
+originalcode:
+mov ebx,[edi+38]
+mov eax,[edi+34]
+
+exit:
+jmp returnhere
+
+zg+e:
+jmp newmem
+nop
+returnhere:
+
+
+ 
+ 
+[DISABLE]
+dealloc(newmem)
+zg+e:
+mov ebx,[edi+38]
+mov eax,[edi+34]
+</AssemblerScript>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>554</ID>
+              <Description>"功勋不减（自身要有至少60战功）"</Description>
+              <LastState Activated="0"/>
+              <Color>80000008</Color>
+              <VariableType>Auto Assembler Script</VariableType>
+              <AssemblerScript>aobscan(sc,89 46 60 8B 7E 64 85 FF)
+[ENABLE]
+alloc(newmem,2048)
+label(returnhere)
+label(originalcode)
+label(exit)
+newmem:
+mov [edi+34],#0
+originalcode:
+mov ebx,[edi+38]
+mov eax,[edi+34]
+
+exit:
+jmp returnhere
+
+sc+e:
+jmp newmem
+nop
+returnhere:
+
+[DISABLE]
+dealloc(newmem)
+sc+e:
+mov ebx,[edi+38]
+mov eax,[edi+34]
+</AssemblerScript>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>555</ID>
+              <Description>"功勋越用越多（自身要有至少60战功）"</Description>
+              <LastState Activated="0"/>
+              <Color>80000008</Color>
+              <VariableType>Auto Assembler Script</VariableType>
+              <AssemblerScript>aobscan(sc,89 46 60 8B 7E 64 85 FF)
+[ENABLE]
+alloc(newmem,2048)
+label(returnhere)
+label(originalcode)
+label(exit)
+newmem:
+originalcode:
+mov eax,[edi+34]
+add ebx,eax
+exit:
+jmp returnhere
+sc+11:
+jmp newmem
+returnhere:
+[DISABLE]
+dealloc(newmem)
+sc+11:
+mov eax,[edi+34]
+sub ebx,eax
+</AssemblerScript>
+            </CheatEntry>
+          </CheatEntries>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>560</ID>
+          <Description>"造二牛魔谷跳关"</Description>
+          <Options moHideChildren="1" moAllowManualCollapseAndExpand="1"/>
+          <LastState Value="" Activated="0" RealAddress="00000000"/>
+          <Color>80000008</Color>
+          <GroupHeader>1</GroupHeader>
+          <CheatEntries>
+            <CheatEntry>
+              <ID>556</ID>
+              <Description>"宋帝王【七夕副本】"</Description>
+              <LastState Activated="0"/>
+              <Color>80000008</Color>
+              <VariableType>Auto Assembler Script</VariableType>
+              <AssemblerScript>[ENABLE]
+aobscan(nmg,06 00 00 00 8B 86 B0 00 00)
+nmg:
+db 09 00 00 00 8B 86 B0 00 00 00
+ 
+[DISABLE]
+aobscan(qx,09 00 00 00 8B 86 B0 00 00 00)
+qx:
+db 06 00 00 00 8B 86 B0 00 00
+</AssemblerScript>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>4</ID>
+              <Description>"转轮王【不需要通关】"</Description>
+              <LastState Activated="0"/>
+              <Color>80000008</Color>
+              <VariableType>Auto Assembler Script</VariableType>
+              <AssemblerScript>[ENABLE]
+aobscan(nmw,06 00 00 00 8B 86 B0 00 00)
+nmw:
+db 04 00 00 00 8B 86 B0 00 00 00
+ 
+ 
+[DISABLE]
+aobscan(zlw,04 00 00 00 8B 86 B0 00 00 00)
+zlw:
+db 06 00 00 00 8B 86 B0 00 00 00
+</AssemblerScript>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>5</ID>
+              <Description>"刑天【不需要阎罗令】"</Description>
+              <LastState Activated="0"/>
+              <Color>80000008</Color>
+              <VariableType>Auto Assembler Script</VariableType>
+              <AssemblerScript>[ENABLE]
+aobscan(nmg,06 00 00 00 8B 86 B0 00 00)
+nmg:
+db 07 00 00 00 8B 86 B0 00 00 00
+ 
+[DISABLE]
+aobscan(qx,07 00 00 00 8B 86 B0 00 00 00)
+qx:
+db 06 00 00 00 8B 86 B0 00 00
+</AssemblerScript>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>557</ID>
+              <Description>"地藏戒【楚江王副本】"</Description>
+              <LastState Activated="0"/>
+              <Color>80000008</Color>
+              <VariableType>Auto Assembler Script</VariableType>
+              <AssemblerScript>[ENABLE]
+aobscan(nmg,06 00 00 00 8B 86 B0 00 00)
+nmg:
+db 08 00 00 00 8B 86 B0 00 00 00
+ 
+[DISABLE]
+aobscan(qx,08 00 00 00 8B 86 B0 00 00 00)
+qx:
+db 06 00 00 00 8B 86 B0 00 00
+</AssemblerScript>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>558</ID>
+              <Description>"刑天刀（盾）【国庆副本】"</Description>
+              <LastState Activated="0"/>
+              <Color>80000008</Color>
+              <VariableType>Auto Assembler Script</VariableType>
+              <AssemblerScript>[ENABLE]
+aobscan(nmg,06 00 00 00 8B 86 B0 00 00)
+nmg:
+db 0B 00 00 00 8B 86 B0 00 00 00
+ 
+[DISABLE]
+aobscan(qx,0B 00 00 00 8B 86 B0 00 00 00)
+qx:
+db 06 00 00 00 8B 86 B0 00 00
+</AssemblerScript>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>8</ID>
+              <Description>"白骨精【白骨秘境】"</Description>
+              <LastState Activated="0"/>
+              <Color>80000008</Color>
+              <VariableType>Auto Assembler Script</VariableType>
+              <AssemblerScript>[ENABLE]
+aobscan(nmg,06 00 00 00 8B 86 B0 00 00)
+nmg:
+db 05 00 00 00 8B 86 B0 00 00 00
+ 
+[DISABLE]
+aobscan(qx,05 00 00 00 8B 86 B0 00 00 00)
+qx:
+db 06 00 00 00 8B 86 B0 00 00
+</AssemblerScript>
+            </CheatEntry>
+          </CheatEntries>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>561</ID>
+          <Description>"全屏攻击（先打一下怪再激活）"</Description>
+          <Options moHideChildren="1" moBindActivation="1"/>
+          <LastState Value="" Activated="0" RealAddress="00000000"/>
+          <Color>80000008</Color>
+          <GroupHeader>1</GroupHeader>
+          <CheatEntries>
+            <CheatEntry>
+              <ID>3</ID>
+              <Description>"全屏攻击第一步"</Description>
+              <LastState Activated="0"/>
+              <Color>80000008</Color>
+              <VariableType>Auto Assembler Script</VariableType>
+              <AssemblerScript>aobscan(qp,8B 5A 08 8B 8B 64 01 00 00 8B 9D 7C FF FF FF)
+[ENABLE]
+qp+62:
+db EB
+ 
+[DISABLE]
+qp+62:
+db 75
+</AssemblerScript>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>6</ID>
+              <Description>"全屏攻击第二步"</Description>
+              <LastState Activated="0"/>
+              <Color>80000008</Color>
+              <VariableType>Auto Assembler Script</VariableType>
+              <AssemblerScript>aobscan(gj,8B 73 08 8B 4E 50 8B B5 64 FF FF FF)
+[ENABLE]
+gj+6b:
+db 0f 85
+[DISABLE]
+gj+6b:
+db 0f 84
+</AssemblerScript>
+            </CheatEntry>
+          </CheatEntries>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>587</ID>
+          <Description>"法宝合成(先点成长，再点五行，否则游戏崩溃)"</Description>
+          <Options moHideChildren="1" moAllowManualCollapseAndExpand="1"/>
+          <LastState Value="" Activated="0" RealAddress="00000000"/>
+          <Color>80000008</Color>
+          <GroupHeader>1</GroupHeader>
+          <CheatEntries>
+            <CheatEntry>
+              <ID>10</ID>
+              <Description>"五毒兽成长率2.0"</Description>
+              <LastState Activated="0"/>
+              <Color>80000008</Color>
+              <VariableType>Auto Assembler Script</VariableType>
+              <AssemblerScript>aobscan(wds,8D 55 B8 8B 4D E0 8B 45 E8)
+[ENABLE]
+alloc(newmem,2048)
+label(returnhere)
+label(originalcode)
+label(exit)
+alloc(bhf,8)
+registersymbol(bhf)
+bhf:
+dq (double)2
+newmem:
+originalcode:
+movq xmm0,[bhf]
+movq [ebp-48],xmm0
+exit:
+jmp returnhere
+wds-1c:
+jmp newmem
+returnhere:
+[DISABLE]
+dealloc(newmem)
+wds-1c:
+movq [ebp-48],xmm0
+</AssemblerScript>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>581</ID>
+              <Description>"血海魔童成长率1.8"</Description>
+              <LastState Activated="0"/>
+              <Color>80000008</Color>
+              <VariableType>Auto Assembler Script</VariableType>
+              <AssemblerScript>aobscan(xhmt,8B 45 D0 8D 75 B8 83 EC 04)
+[ENABLE]
+alloc(newmem,2048)
+label(returnhere)
+label(originalcode)
+label(exit)
+alloc(bhf,8)
+registersymbol(bhf)
+bhf:
+dq (double)1.8
+newmem:
+originalcode:
+movq xmm0,[bhf]
+movq [ebp-48],xmm0
+exit:
+jmp returnhere
+
+xhmt-1a:
+jmp newmem
+returnhere:
+
+[DISABLE]
+dealloc(newmem)
+xhmt-1a:
+movq [ebp-48],xmm0
+</AssemblerScript>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>565</ID>
+              <Description>"罗刹妖伞成长率1.6"</Description>
+              <LastState Activated="0"/>
+              <Color>80000008</Color>
+              <VariableType>Auto Assembler Script</VariableType>
+              <AssemblerScript>aobscan(lcys,83 C4 10 8B F8 83 E7 F8 8D 9B B4 01 00 00 83 EC 04 57 53 FF 75 EC)
+[ENABLE]
+alloc(newmem,2048)
+label(returnhere)
+label(originalcode)
+label(exit)
+alloc(lcs,8)
+registersymbol(lcs)
+lcs:
+dq (double)1.6
+newmem:
+originalcode:
+movq xmm0,[lcs]
+movq [ebp-48],xmm0
+exit:
+jmp returnhere
+lcys+b1:
+jmp newmem
+returnhere:
+[DISABLE]
+dealloc(newmem)
+lcys+b1:
+movq [ebp-48],xmm0
+</AssemblerScript>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>573</ID>
+              <Description>"白霜镜成长率1.4"</Description>
+              <LastState Activated="0"/>
+              <Color>80000008</Color>
+              <VariableType>Auto Assembler Script</VariableType>
+              <AssemblerScript>aobscan(bsj,8B F0 8D 76 01 8D 55 F0 8B 4D DC)
+[ENABLE]
+alloc(newmem,2048)
+label(returnhere)
+label(originalcode)
+label(exit)
+alloc(bst,8)
+registersymbol(bst)
+bst:
+dq (double)1.4
+newmem:
+originalcode:
+movq xmm0,[bst]
+movq [ebp-48],xmm0
+exit:
+jmp returnhere
+bsj+6d:
+jmp newmem
+returnhere:
+[DISABLE]
+dealloc(newmem)
+bsj+6d:
+movq [ebp-48],xmm0
+</AssemblerScript>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>574</ID>
+              <Description>"天煞古剑成长率1.2"</Description>
+              <LastState Activated="0"/>
+              <Color>80000008</Color>
+              <VariableType>Auto Assembler Script</VariableType>
+              <AssemblerScript>aobscan(tsgj,8D 9B AC 01 00 00 83 EC 04 57 53 FF 75 EC)
+[ENABLE]
+alloc(newmem,2048)
+label(returnhere)
+label(originalcode)
+label(exit)
+alloc(bhf,8)
+registersymbol(bhf)
+bhf:
+dq (double)1.2
+newmem:
+originalcode:
+movq xmm0,[bhf]
+movq [ebp-48],xmm0
+exit:
+jmp returnhere
+tsgj+a9:
+jmp newmem
+returnhere:
+[DISABLE]
+dealloc(newmem)
+tsgj+a9:
+movq [ebp-48],xmm0
+</AssemblerScript>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>582</ID>
+              <Description>"地煞葫芦成长率1.0"</Description>
+              <LastState Activated="0"/>
+              <Color>80000008</Color>
+              <VariableType>Auto Assembler Script</VariableType>
+              <AssemblerScript>aobscan(dshl,8B 41 38 8B 48 08 8B 41 10 8B 48 58)
+[ENABLE]
+alloc(newmem,2048)
+label(returnhere)
+label(originalcode)
+label(exit)
+alloc(bhf,8)
+registersymbol(bhf)
+bhf:
+dq (double)1
+newmem:
+originalcode:
+movq xmm0,[bhf]
+movq [ebp-48],xmm0
+exit:
+jmp returnhere
+dshl+f:
+jmp newmem
+returnhere:
+[DISABLE]
+dealloc(newmem)
+dshl+f:
+movq [ebp-48],xmm0
+</AssemblerScript>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>9</ID>
+              <Description>"合成法宝100%双五行"</Description>
+              <LastState Activated="0"/>
+              <Color>80000008</Color>
+              <VariableType>Auto Assembler Script</VariableType>
+              <AssemblerScript>aobscan(swx,8B C8 8B 45 08 8D 49 01 89 4D FC 8D 4D D0)
+[ENABLE]
+swx+a2:
+db 0f 85
+[DISABLE]
+swx+a2:
+db 0f 86
+</AssemblerScript>
+            </CheatEntry>
+          </CheatEntries>
+        </CheatEntry>
+      </CheatEntries>
+    </CheatEntry>
+  </CheatEntries>
+  <UserdefinedSymbols>
+    <SymbolEntry>
+      <Name>czdz</Name>
+      <Address>155B8086</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>rwzz</Name>
+      <Address>1C5C95D3</Address>
+    </SymbolEntry>
+  </UserdefinedSymbols>
+  <Comments>鍏充簬琛ㄦ牸淇℃伅:
+</Comments>
+</CheatTable>
